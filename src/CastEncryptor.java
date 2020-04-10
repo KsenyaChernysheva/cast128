@@ -100,8 +100,8 @@ public class CastEncryptor {
 
         byte[] byteZ = new byte[16];    //Z-ключ в байтах
 
-        short[] indexK; //массив индексов (Java без неотрицательных типов данных... C#, где же ты)
-        short[] indexZ; //массив индексов (Java без неотрицательных типов данных... C#, где же ты)
+        short[] indexK; //массив индексов
+        short[] indexZ; //массив индексов
 
         //Развертка первых пар ключа!!!
         indexK = byteToIndex(bytekey);
@@ -259,7 +259,7 @@ public class CastEncryptor {
         //Преобразования ключа
         int[] km = new int[16];
         int[] kr = new int[16];
-        int[] k; //резерв под ключ, его можно запоминать на устройстве
+        int[] k; //резерв под ключ
 
         k = getKey(keyHex); //раскрываем ключ
         for (int i=0; i<16; i++) { //делим ключ на две части
